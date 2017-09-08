@@ -1,2 +1,2 @@
 # puls-task
-Front end tasl
+Front end task
