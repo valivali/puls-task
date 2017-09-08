@@ -1,8 +1,9 @@
 var fetchResults = function(){
-  var txt = document.getElementById("searchText").value;
+  var txt = document.getElementById("searchText");
   var ul = document.getElementById("resultContainer");
   ul.innerHTML = '';
-  var url = 'http://api.tvmaze.com/search/shows?q='+txt;
+  var url = 'http://api.tvmaze.com/search/shows?q='+txt.value;
+  txt.value = '';
   fetch(url).then(function(res){
     res.json().then(function(resultList){
       if (resultList.length === 0){
@@ -59,7 +60,6 @@ var showPopup = function (movie){
     content.appendChild(cast_title);
     content.appendChild(cast);
   }
-  console.log(movie.show.name);
 };
 
 var getCast = function(ul, movie_id){
