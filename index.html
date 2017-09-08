@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movies</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <script src="movies.js"></script>
+</head>
+
+<body>
+  <div class="page-container">
+    <h1>Welcome!</h1>
+    
+    <div class="search-container">
+      <input type="text" id="searchText" placeholder="Enter a movie name here..."/>
+      <div class="submit-btn" onclick="fetchResults()">Search</div>
+    </div>
+    
+    <ul class="result-container" id="resultContainer">
+      
+    </ul>
+  
+    <div class="overlay is-hidden" id="overlay">
+      <div class="modal-content">
+        <span class="button-close" onclick="closeModal();"></span>
+        <div class="movie-details" id="movie-details">
+          <h1>More in detail</h1>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
